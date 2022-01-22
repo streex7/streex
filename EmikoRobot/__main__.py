@@ -82,27 +82,31 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/11b5922a33de9968cedfe.jpg)
+🍂 ✧𝚂𝓉𝚛𝚎𝚎✧ Is here to manage your chat [❤️‍🔥](https://telegra.ph/file/4d8b7ca18168f1c4ef0ed.mp4)
 ────────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
 ────────────────────────
-✪ Hit /help to see my available commands.
+🍂 Providing you best service through /help command don't forget to join [UPDATES](http://t.me/streex) .
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text="About Emiko Robot", callback_data="emiko_"),
+        InlineKeyboardButton(text="✧𝚂𝓉𝚛𝚎𝚎✧ 𝓘𝓝𝓕𝓞", callback_data="emiko_"),
     ],
     [
-        InlineKeyboardButton(text="Get Help", callback_data="help_back"),
+        InlineKeyboardButton(text="✴️𝐒𝐞𝐫𝐯𝐢𝐜𝐞𝐬 ✴️", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Try inline!​​", switch_inline_query_current_chat=""
+            text="▫️𝐈𝐍𝐋𝐈𝐍𝐄▫️", switch_inline_query_current_chat=""
         ),
     ],
     [
         InlineKeyboardButton(
-            text="➗ Add Emiko To Your Group ➗", url="t.me/EmiexRobot?startgroup=new"),
+            text="🔘𝐔𝐩𝐝𝐚𝐭𝐞𝐬🔘", url="t.me/streex"),
+    ],
+    [
+        InlineKeyboardButton(
+            text="➗ 💐 𝓘𝓷𝓿𝓲𝓽𝓮 ✧𝚂𝓉𝚛𝚎𝚎✧ 𝓽𝓸 𝔂𝓸𝓾𝓻 𝓬𝓱𝓪𝓽 ➗", url="t.me/streerobot?startgroup=new"),
     ],
 ]
 
@@ -110,7 +114,7 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-EMI_IMG = "https://telegra.ph/file/5ff1cb39902809148f07f.jpg"
+EMI_IMG = "https://telegra.ph/file/4d8b7ca18168f1c4ef0ed.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @excrybaby \
@@ -360,29 +364,22 @@ def emiko_about_callback(update, context):
     query = update.callback_query
     if query.data == "emiko_":
         query.message.edit_text(
-            text="๏ I'm *Emiko*, a powerful group management bot built to help you manage your group easily."
-            "\n• I can restrict users."
-            "\n• I can greet users with customizable welcome messages and even set a group's rules."
-            "\n• I have an advanced anti-flood system."
-            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_Emiko's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for EmikoRobot.",
+            text="🍂*✧𝚂𝓉𝚛𝚎𝚎✧*, a stable chat managing bot continously updating with latest features."
+           "\n• Check out the bellow buttons🌻.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="emiko_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="emiko_notes"),
+                    InlineKeyboardButton(text="♤ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ♤", url="t.me/centralcomtg"),
+                    InlineKeyboardButton(text="🔥ᴅᴇᴠ", url="t.me/livefru"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="emiko_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="emiko_credit"),
+                    InlineKeyboardButton(text="ʙᴏᴛ ʟɪꜱᴛ💥", url="t.me/codesfru"),
+                    InlineKeyboardButton(text="ᴅɪᴠɪɴᴇꜱ ɴᴇᴛᴡᴏʀᴋ℠", url="t.me/Divinesnetwork"),
                  ],
                  [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/kennedy-ex/EmikoRobot"),
+                    InlineKeyboardButton(text="ʀᴇᴘᴏꜱɪᴛᴏʀʏ🌥", url="https://telegra.ph/%F0%9D%9A%82%F0%9D%93%89%F0%9D%9A%9B%F0%9D%9A%8E%F0%9D%9A%8E-01-22"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_back"),
@@ -443,7 +440,7 @@ def emiko_about_callback(update, context):
                  [
                     InlineKeyboardButton(text="Support", url="t.me/emikosupport"),
                     InlineKeyboardButton(text="Updates", url="https://t.me/KennedyProject"),
-                 ],
+                 ], 
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
                  
